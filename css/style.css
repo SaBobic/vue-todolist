@@ -2,17 +2,16 @@
     max-width: 600px;
 }
 
-#todo-list .todo-item {
-    font-size: 18px;
+#tasks-list .task-item {
     border-bottom: 1px solid #dedede;
     padding: 5px 10px;
 }
 
-#todo-list .todo-element.done {
+#tasks-list .task-text > .done {
     color: #bebebe;
     text-decoration: line-through;
 }
 
-#todo-list .delete-mark {
+#tasks-list .delete-mark {
     text-align: center;
 }

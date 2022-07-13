@@ -25,12 +25,14 @@
                 </div>
             </div>
             <!-- To do list -->
-            <div class="row" id="todo-list">
+            <div class="row" id="tasks-list">
                 <!-- To do item -->
-                <div class="col-12 todo-item">
+                <div v-for="task in tasks" class="col-12 task-item">
                     <div class="row">
                         <!-- To do text -->
-                        <div class="col-11 todo-element done">Read emails</div>
+                        <div class="col-11 task-text">
+                            <span :class="{'done' : task.done === true}">{{ task.text }}</span>
+                        </div>
                         <!-- Clear item mark -->
                         <div class="col-1 delete-mark">
                             <i class="fa-solid fa-xmark"></i>
@@ -39,6 +41,7 @@
                 </div>
             </div>
         </div>
+
         <!-- JavaScript -->
         <script src="js/script.js"></script>
     </body>
