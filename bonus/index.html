@@ -30,7 +30,7 @@
                 <div v-for="(task, i) in tasks" class="col-12 task-item">
                     <div class="row">
                         <!-- To do text -->
-                        <div class="col-11 task-text">
+                        <div class="col-11 task-text" @click="taskStatus(i)">
                             <span :class="{'done' : task.done === true}">{{ task.text }}</span>
                         </div>
                         <!-- Clear item mark -->

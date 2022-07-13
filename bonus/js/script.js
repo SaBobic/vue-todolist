@@ -44,5 +44,8 @@ const root = new Vue({
                 this.newTask.text = '';
             }
         },
+        taskStatus(i) {
+            this.tasks[i].done = !this.tasks[i].done;
+        },
     },
 });

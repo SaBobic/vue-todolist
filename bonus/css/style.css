@@ -23,7 +23,8 @@
     color: #ff0000;
 }
 
-.add-mark:hover {
+.add-mark:hover,
+.task-text > .done:hover {
     color: #007bff;
 }
 
