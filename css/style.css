@@ -2,16 +2,22 @@
     max-width: 600px;
 }
 
-#tasks-list .task-item {
+.task-item {
     border-bottom: 1px solid #dedede;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
-#tasks-list .task-text > .done {
+.task-text > .done {
     color: #bebebe;
     text-decoration: line-through;
 }
 
-#tasks-list .delete-mark {
+.delete-mark {
     text-align: center;
+}
+
+.task-text:hover,
+.delete-mark:hover {
+    color: #ff0000;
 }

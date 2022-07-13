@@ -25,16 +25,16 @@
                 </div>
             </div>
             <!-- To do list -->
-            <div class="row" id="tasks-list">
+            <div class="row">
                 <!-- To do item -->
-                <div v-for="task in tasks" class="col-12 task-item">
+                <div v-for="(task, i) in tasks" class="col-12 task-item">
                     <div class="row">
                         <!-- To do text -->
                         <div class="col-11 task-text">
                             <span :class="{'done' : task.done === true}">{{ task.text }}</span>
                         </div>
                         <!-- Clear item mark -->
-                        <div class="col-1 delete-mark">
+                        <div class="col-1 delete-mark" @click="clearTask(i)">
                             <i class="fa-solid fa-xmark"></i>
                         </div>
                     </div>

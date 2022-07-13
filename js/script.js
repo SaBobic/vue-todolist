@@ -29,4 +29,9 @@ const root = new Vue({
             },
         ],
     },
+    methods: {
+        clearTask(index) {
+            return this.tasks.splice(index, 1);
+        },
+    },
 });
