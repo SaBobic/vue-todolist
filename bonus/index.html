@@ -43,7 +43,7 @@
                     <div class="row">
                         <!-- To do text -->
                         <div class="col-11 task-text">
-                            <input type="text" placeholder="Add task here" v-model="newTask.text" />
+                            <input type="text" placeholder="Add task here" v-model="newTask.text" @keyup.enter="addTask" />
                         </div>
                         <!-- Clear item mark -->
                         <div class="col-1 add-mark" @click="addTask">
