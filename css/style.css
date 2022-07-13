@@ -13,11 +13,25 @@
     text-decoration: line-through;
 }
 
-.delete-mark {
+.delete-mark,
+.add-mark {
     text-align: center;
 }
 
 .task-text:hover,
 .delete-mark:hover {
     color: #ff0000;
+}
+
+.add-mark:hover {
+    color: #007bff;
+}
+
+input {
+    border: none;
+    width: 100%;
+}
+
+input:focus-visible {
+    outline: none;
 }

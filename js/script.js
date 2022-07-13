@@ -28,10 +28,19 @@ const root = new Vue({
                 done: false,
             },
         ],
+        newTask: {
+            text: '',
+            done: false,
+        },
     },
     methods: {
         clearTask(index) {
-            return this.tasks.splice(index, 1);
+            this.tasks.splice(index, 1);
+        },
+        addTask() {
+            const task = { ...this.newTask };
+            this.tasks.push(task);
+            this.newTask.text = '';
         },
     },
 });

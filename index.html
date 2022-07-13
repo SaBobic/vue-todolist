@@ -39,6 +39,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 task-item">
+                    <div class="row">
+                        <!-- To do text -->
+                        <div class="col-11 task-text">
+                            <input type="text" placeholder="Add task here" v-model="newTask.text" />
+                        </div>
+                        <!-- Clear item mark -->
+                        <div class="col-1 add-mark" @click="addTask">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
