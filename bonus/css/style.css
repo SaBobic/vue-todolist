@@ -1,0 +1,37 @@
+.my_container {
+    max-width: 600px;
+}
+
+.task-item {
+    border-bottom: 1px solid #dedede;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.task-text > .done {
+    color: #bebebe;
+    text-decoration: line-through;
+}
+
+.delete-mark,
+.add-mark {
+    text-align: center;
+}
+
+.task-text:hover,
+.delete-mark:hover {
+    color: #ff0000;
+}
+
+.add-mark:hover {
+    color: #007bff;
+}
+
+input {
+    border: none;
+    width: 100%;
+}
+
+input:focus-visible {
+    outline: none;
+}

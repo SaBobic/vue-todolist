@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" />
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+        <!-- My Style -->
+        <link rel="stylesheet" href="css/style.css" />
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+        <title>To Do List (made with Vue.js)</title>
+    </head>
+
+    <body>
+        <div class="container my-5 my_container" id="root">
+            <!-- Date -->
+            <div class="row mb-3">
+                <div class="col">
+                    <h2>Today</h2>
+                </div>
+            </div>
+            <!-- To do list -->
+            <div class="row">
+                <!-- To do item -->
+                <div v-for="(task, i) in tasks" class="col-12 task-item">
+                    <div class="row">
+                        <!-- To do text -->
+                        <div class="col-11 task-text">
+                            <span :class="{'done' : task.done === true}">{{ task.text }}</span>
+                        </div>
+                        <!-- Clear item mark -->
+                        <div class="col-1 delete-mark" @click="clearTask(i)">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 task-item">
+                    <div class="row">
+                        <!-- To do text -->
+                        <div class="col-11 task-text">
+                            <input type="text" placeholder="Add task here" v-model="newTask.text" />
+                        </div>
+                        <!-- Clear item mark -->
+                        <div class="col-1 add-mark" @click="addTask">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
