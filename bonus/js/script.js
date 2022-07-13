@@ -40,6 +40,8 @@ const root = new Vue({
         addTask() {
             if (this.newTask.text) {
                 const task = { ...this.newTask };
+                const taskTextCapit = task.text.replace(task.text[0], task.text[0].toUpperCase());
+                task.text = taskTextCapit;
                 this.tasks.push(task);
                 this.newTask.text = '';
             }
