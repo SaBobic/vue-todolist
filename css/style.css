@@ -1,0 +1,18 @@
+.my_container {
+    max-width: 600px;
+}
+
+#todo-list .todo-item {
+    font-size: 18px;
+    border-bottom: 1px solid #dedede;
+    padding: 5px 10px;
+}
+
+#todo-list .todo-element.done {
+    color: #bebebe;
+    text-decoration: line-through;
+}
+
+#todo-list .delete-mark {
+    text-align: center;
+}
